@@ -1,0 +1,690 @@
+@charset "utf-8";
+body{
+	background-image: url("../images/bg.png");
+	background-repeat: no-repeat;
+	width: 100%;
+}
+/*外层盒子*/
+.container{
+	width: 1200px;
+	/*min-height: 1024px;*/
+	margin:0 auto;
+	height: 1800px;
+
+}
+/*header部分*/
+.container .header{
+	width: 100%;
+	height: 300px;
+			/*border: 1px solid #000;*/
+	position: relative;
+}
+.container .header .logo{
+	float: left;
+	padding-top: 85px;
+
+}
+.container .header .logo img{
+	width: 100%;
+}
+.container .header form{
+	line-height: 36px;
+	float: right;
+	padding-right: 20px;
+	height: 36px;
+	margin-top: -10px;
+
+}
+.container .header .search{
+	width: 200px;
+	height: 36px;
+	border: 1px solid #009900;
+	border-radius: 6px;
+	padding-left: 10px;
+	outline:none;
+
+}
+.container .header .btn{
+	width: 60px;
+	height: 36px;
+	border: 1px solid #11db89;
+	background-color: #11db89;
+	color: #fff;
+	font-size: 16px; 
+	border-radius: 6px;
+	/*position: absolute;*/
+
+}
+.container .header .phone{
+	position: absolute;
+	bottom: 15px;
+	right: 100px;
+	color: #666;
+	font-weight: bold;
+
+}
+/*header部分   *end*/
+
+/*nav 导航*/
+.container .nav{
+	width: 100%;
+	height: 40px;
+	background-color: #11db89;
+	border-radius: 6px;
+}
+.container .nav ul{
+	width: 100%;
+}
+.container .nav ul>li{
+	float: left;
+}
+.container .nav ul li a{
+	display: block;
+	width: 120px;
+	text-align: center;
+	color: #fff;
+	font:500 16px/40px "微软雅黑";
+}
+/*二级导航*/
+
+.container .nav ul>li>ul{
+	display: none;
+	position: absolute;
+	width: 120px;
+	background-color: #11db89;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 2;
+}
+.container .nav ul>li>ul>li{
+	width: 120px;
+}
+.container .nav ul>li>ul>li>a{
+	width: 120px;
+	display: block;
+	font:500 16px/40px "微软雅黑";
+	border-bottom: 1px solid #eee;
+}
+.container .nav ul>li>ul>li:last-child a{
+	border: none;
+}
+/*nav 导航    *end*/
+
+/*slideshow 轮播图*/
+.container .slideshow{
+	margin-top: 20px;
+	width: 100%;
+
+}
+.container .slideshow .slideshow_img{
+	width: 750px;
+	height: 400px;
+	overflow: hidden;
+}
+.container .slideshow .slideshow_img ul{
+	width: 4500px;
+	height: 400px;
+}
+.container .slideshow .slideshow_img ul li{
+	float: left;
+}
+.container .slideshow .slideshow_img ul li a img{
+	display: block;
+	width: 750px;
+	height: 400px;
+	border-radius: 4px;
+}
+.container .slideshow .slideshow_txt{
+	width: 450px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 6px #ccc;
+}
+.container .slideshow .slideshow_txt .article_title{
+	width: 100%;
+	height: 40px;
+	/*背景色  css3渐变*/
+	background: -webkit-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: -o-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+
+}
+.container .slideshow .slideshow_txt .article_title .title_icon{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 7.5px;
+	left: 15px;
+}
+.container .slideshow .slideshow_txt .article_title .title{
+	padding-left: 50px;
+	font:600 16px/40px "微软雅黑";
+	color: #666;
+}
+.container .slideshow .slideshow_txt .article_title .title:hover{
+	color: #333;
+}
+.container .slideshow .slideshow_txt .article_title .more{
+	font:500 12px/40px "微软雅黑";
+	padding-right: 30px;
+	color: #333;
+}
+.container .slideshow .slideshow_txt .article_title img:last-child{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+/* 文章列表 */
+.container .slideshow .slideshow_txt ul{
+	border-top: 1px solid #eee;
+	width: 100%;
+	padding: 10px;
+	padding-left: 30px;
+	background-color: #fff;
+}
+.container .slideshow .slideshow_txt ul li{
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	/*border: 1px solid #000;*/
+	list-style: initial;
+	color: #666;
+}
+.container .slideshow .slideshow_txt ul li a{
+	display: block;
+	width: 70%;
+	color: #333;
+	font:500 14px/36px "微软雅黑";
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;  
+}
+.container .slideshow .slideshow_txt ul li a:hover{
+	color: #11db89;
+}
+.container .slideshow .slideshow_txt ul li span{
+	float: right;
+}
+/*slideshow 轮播图   *end*/
+
+
+/*content  主要内容板块 */
+/*公共样式*/
+.content{
+	width: 1200px;
+	margin-top: 20px;
+}
+.content .section{
+	width: 1200px;
+	height: 260px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.content .section .section_left{
+	width: 340px;
+	height: 260px;
+	overflow: hidden;
+	box-shadow: 0 0 6px #ccc;
+	background-color: #fff;
+}
+.content .section .section_center{
+	width: 500px;
+	height: 260px;
+	box-shadow: 0 0 6px #ccc;
+	overflow: hidden;
+	background-color: #fff;
+}
+.content .section .section_right{
+	width: 340px;
+	height: 260px;
+	box-shadow: 0 0 6px #ccc;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+/* section_left 板块 left    */
+/* 励志寄语 文章标题 */
+.content .section .section_left .section_title{
+	width: 100%;
+	height: 40px;
+	position: relative;
+	/*背景色  css3渐变*/
+	background: -webkit-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: -o-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+}
+.content .section .section_left .section_title .title_icon{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 7.5px;
+	left: 15px;
+}
+.content .section .section_left .section_title .title{
+	padding-left: 50px;
+	font:600 16px/40px "微软雅黑";
+	color: #666;
+}
+.content .section .section_left .section_title .title:hover,
+.content .section .section_right .section_title .title:hover{
+	color: #333;
+}
+.content .section .section_left .section_title .more{
+	font:500 12px/40px "微软雅黑";
+	padding-right: 30px;
+	color: #333;
+}
+.content .section .section_left .section_title img:last-child{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+/* 励志寄语 文章列表  */
+.content .section .section_left .section_txt{
+	padding: 20px;
+	border-top: 1px solid #eee;
+}
+.content .section .section_left .section_txt p{
+	color: #333;
+	font:500 14px/24px "微软雅黑";
+	text-indent: 2em;
+}
+/* section_left 板块 left   *end */
+
+/* section_center 板块 center */
+/* 心灵驿站  和 	典型案例 */
+.content .section .section_center .section_title,
+.content .section:nth-child(2) .section_center .article_title,
+.content .section:nth-child(2) .section_right .section_list .article_title,
+.content .section:nth-child(3) .section_center .article_title,
+.content .section:nth-child(3) .section_left .article_title,
+.content .section:nth-child(3) .section_right .article_title{
+	width: 100%;
+	height: 40px;
+	position: relative;
+	/*背景色  css3渐变*/
+	background: -webkit-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: -o-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+}
+.content .section .section_center .section_title .title_icon,
+.content .section:nth-child(2) .section_center .article_title .title_icon,
+.content .section:nth-child(2) .section_right .section_list .article_title .title_icon,
+.content .section:nth-child(3) .section_center .article_title .title_icon,
+.content .section:nth-child(3) .section_left .article_title .title_icon,
+.content .section:nth-child(3) .section_right .article_title .title_icon{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 7.5px;
+	left: 15px;
+}
+.content .section .section_center .section_title .title,
+.content .section:nth-child(2) .section_center .article_title .title,
+.content .section:nth-child(2) .section_right .section_list .article_title .title,
+.content .section:nth-child(3) .section_center .article_title .title,
+.content .section:nth-child(3) .section_left .article_title .title,
+.content .section:nth-child(3) .section_right .article_title .title{
+	padding-left: 50px;
+	font:600 16px/40px "微软雅黑";
+	color: #666;
+}
+.content .section .section_center .section_title .title:hover,
+.content .section:nth-child(2) .section_center .article_title .title:hover,
+.content .section:nth-child(2) .section_right .section_list .article_title .title:hover,
+.content .section:nth-child(3) .section_center .article_title .title:hover,
+.content .section:nth-child(3) .section_left .article_title .title:hover,
+.content .section:nth-child(3) .section_right  .article_title .title:hover{
+	color: #333;
+}
+.content .section .section_center .section_title .more,
+.content .section:nth-child(2) .section_center .article_title .more,
+.content .section:nth-child(2) .section_right .section_list .article_title .more,
+.content .section:nth-child(3) .section_center .article_title .more,
+.content .section:nth-child(3) .section_left .article_title .more,
+.content .section:nth-child(3) .section_right .article_title .more{
+	font:500 12px/40px "微软雅黑";
+	padding-right: 30px;
+	color: #333;
+}
+.content .section .section_center .section_title img:last-child,
+.content .section:nth-child(2) .section_center .article_title img:last-child,
+.content .section:nth-child(2) .section_right .section_list .article_title img:last-child,
+.content .section:nth-child(3) .section_center .article_title img:last-child,
+.content .section:nth-child(3) .section_left .article_title img:last-child,
+.content .section:nth-child(3) .section_right .article_title img:last-child{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+/* 励志寄语 文章列表  */
+.content .section .section_center .section_txt{
+	padding: 20px;
+	border-top: 1px solid #eee;
+}
+.content .section .section_center .section_txt p{
+	color: #333;
+	font:500 14px/24px "微软雅黑";
+	text-indent: 2em;
+}
+
+/* section_center 板块 center   *end*/
+
+/* section_right 板块 right */
+/* 励志寄语 文章标题 */
+.content .section .section_right .section_title{
+	width: 100%;
+	height: 40px;
+	position: relative;
+	/*背景色  css3渐变*/
+	background: -webkit-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: -o-linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+	background: linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+}
+.content .section .section_right .section_title .title_icon{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 7.5px;
+	left: 15px;
+}
+.content .section .section_right .section_title .title{
+	padding-left: 50px;
+	font:600 16px/40px "微软雅黑";
+	color: #666;
+}
+.content .section .section_right .section_title .more{
+	font:500 12px/40px "微软雅黑";
+	padding-right: 30px;
+	color: #333;
+}
+.content .section .section_right .section_title img:last-child{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+}
+
+/*文章列表*/		
+/* 心灵驿站  和 	典型案例 */
+.content .section .section_right .section_list,
+.content .section:nth-child(2) .section_center .section_list,
+.content .section:nth-child(2) .section_right .section_list .list,
+.content .section:nth-child(3) .section_center .section_list{
+	border-top: 1px solid #eee;
+	width: 100%;
+	padding:0 10px ;
+	/*padding-bottom: 10px;*/
+	padding-left: 30px;
+	background-color: #fff;
+}
+.content .section .section_right .section_list li,
+.content .section:nth-child(2) .section_center .section_list li,
+.content .section:nth-child(2) .section_right .section_list .list li,
+.content .section:nth-child(3) .section_center .section_list li{
+	height: 36px;
+	line-height: 36px;
+	/*border: 1px solid #000;*/
+	list-style: initial;
+	color: #666;
+
+}
+.content .section .section_right .section_list li a,
+.content .section:nth-child(2) .section_center .section_list li a,
+.content .section:nth-child(2) .section_right .section_list .list li,
+.content .section:nth-child(3) .section_center .section_list li a{
+	display: block;
+	width: 70%;
+	color: #333;
+	font:500 14px/36px "微软雅黑";
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+}
+.content .section .section_right .section_list li a:hover,
+.content .section:nth-child(2) .section_center .section_list li a:hover,
+.content .section:nth-child(3) .section_center .section_list li a:hover{
+	color: #11db89;
+}
+.content .section .section_right .section_list li span,
+.content .section:nth-child(2) .section_center .section_list li span,
+.content .section:nth-child(3) .section_center .section_list li span{
+	float: right;
+}
+
+/* section_right 板块 right   *end */
+
+
+/* <!-- 心理咨询师 模块 --> */
+.content .section:nth-child(3) .section_left .section_txt{
+	height: 220px;
+	/*border: 1px solid #000;*/
+	width: 100%;
+	overflow: hidden;
+
+}
+.content .section:nth-child(3) .section_left .section_txt li{
+	height: 220px;
+}
+.content .section:nth-child(3) .section_left .section_txt img{
+	display: block;
+	float: left;
+	width: 40%;
+	line-height: 220px;
+}
+
+.content .section:nth-child(3) .section_left .section_txt .info{
+	float: right;
+	width: 50%;
+	height: 180px;
+	overflow: hidden;
+}
+.content .section:nth-child(3) .section_left .section_txt .info p{
+	text-indent:0;
+}
+
+/* <!-- 心理咨询师 模块 --> *end*/
+
+/* 板块2 主要功能  测评系统 、 在线预约 、 值班表 */
+.content .section:nth-child(2) .section_left,
+.content .section:nth-child(2) .section_right{
+	box-shadow: none;
+	border-radius: 6px;
+}
+.content .section:nth-child(2) .section_right .section_list{
+	border-radius: 6px;
+	padding: 0;
+
+}
+.content .section:nth-child(2) .section_left .assessment,
+.content .section:nth-child(2) .section_left .appointment,
+.content .section:nth-child(2) .section_left .roster,
+.content .section:nth-child(2) .section_right .message
+{
+	height: 80px;
+	width: 340px;
+	padding-top: 11px;
+	padding-left: 50px;	
+	border-radius: 10px;
+	box-shadow: 0 0 6px #ccc;
+	margin-bottom: 10px;
+	background: linear-gradient(180deg,
+		rgba(255,255,255,1) 0%,
+		rgba(255,255,255,1) 2%,
+		rgba(235,236,241,1) 11%,
+		rgba(255,255,255,1) 100%,
+		rgba(255,255,255,1) 100%
+		);
+}
+.content .section:nth-child(2) .section_left .assessment img,
+.content .section:nth-child(2) .section_left .appointment img,
+.content .section:nth-child(2) .section_left .roster img,
+.content .section:nth-child(2) .section_right .message img{
+	width: 58px;
+	height: 58px;
+	line-height: 80px;
+	float: left;
+
+}
+.content .section:nth-child(2) .section_left .assessment a,
+.content .section:nth-child(2) .section_left .appointment a,
+.content .section:nth-child(2) .section_left .roster a,
+.content .section:nth-child(2) .section_right .message a{
+	width: 70%;
+	display: block;
+	font:600 24px/80px "微软雅黑";
+	float: left;
+	margin-top: -11px;
+	text-align: center;
+	color: #333;
+}
+/* 板块2 主要功能  测评系统 、 在线预约 、 值班表      end*/
+
+
+/*文档下载*/
+
+
+/* 	 */
+.content .section:nth-child(2) .section_right .section_list{
+	width: 340px;
+	height: 170px;
+	box-shadow: 0 0 6px #ccc;
+	overflow: hidden;
+
+
+}
+.content .section:nth-child(2) .section_right .section_list .list{
+
+}
+.content .section:nth-child(2) .section_right .section_list .list li{
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	background-image: url("../images/download_1.png");
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+.content .section:nth-child(2) .section_right .section_list .list li a:last-child{
+	width: 100%;
+}
+
+/*footer  底部 */
+.container .footer{
+	width: 100%;
+	height: 100px;
+}
+.container .footer ul{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px dotted #fff;
+}
+.container .footer li{
+	width: 340px;
+	height: 100px;
+	font-weight: bold;	
+	line-height: 100px;
+	padding-left: 60px;
+	color: #333;
+	background:url("../images/phone.png") left center no-repeat;
+	background-size: 40px 40px;
+}
+.container .footer li:nth-child(2){
+	background:url("../images/map.png") left center no-repeat;
+	background-size: 40px 40px;
+}
+.container .footer li:last-child{
+	background:url("../images/mail.png") left center no-repeat;
+	background-size: 40px 40px;
+}
+
+
+
+/*版权*/
+.copy{
+	text-align: center;
+	padding-top: 20px;
+	color: #333;
+}
